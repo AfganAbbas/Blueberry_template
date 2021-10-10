@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F1F2F6;
+}
+
+#page {
+    background-color: white;
+
+}
+
+#Logo {
+    font-size: 4em;
+}
+
+#sentence {
+    font-size: 14px;
+    text-align: center;
+}
+
+.news-title {
+    text-align: center;
+}
+
+.card-body {
+    border: 1px solid #DDDDDD;
+}
+
+.about .card-body,
+.ads .card,
+.tags .card-body,
+.posts .card-body,
+.quote .card-body {
+    border: none;
+}
+
+.about img {
+    width: 12em;
+    border-radius: 50%;
+}
+
+.three-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+}
+
+.dec-line {
+    background-color: #DDDDDD;
+    display: block;
+}
+
+.line1 {
+    height: 1px;
+    width: 32px;
+    margin-bottom: 3px;
+}
+
+.line2 {
+    height: 1px;
+    width: 48px;
+}
+
+.line3 {
+    margin-top: 1px;
+    height: 1px;
+    width: 18px;
+}
+
+.about .card,
+.tags .card,
+.posts .card,
+.quote .card {
+    padding: 2vh 1vw;
+    margin-bottom: 5vh;
+}
+
+.ads .card {
+    margin-bottom: 5vh;
+}
+
+.about .heading,
+.tags .card-title,
+.posts .card-title {
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    color: #888888;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+.about .card-text {
+    color: #424242;
+    font-size: 14px;
+}
+
+.about .card::before,
+.ads .card::before,
+.tags .card::before,
+.posts .card::before,
+.quote .card::before {
+    content: "";
+    top: 8px;
+    right: 8px;
+    height: 40px;
+    width: 60px;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    position: absolute;
+}
+
+.about .card::after,
+.ads .card::after,
+.tags .card::after,
+.posts .card::after,
+.quote .card::after {
+    content: "";
+    bottom: 8px;
+    left: 8px;
+    height: 60px;
+    width: 40px;
+    border-bottom: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    position: absolute;
+}
+
+.tag {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #363c44;
+    font-size: 10px;
+    margin: 3px 4px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    display: inline-block;
+    position: relative;
+}
+
+.tag::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #9FE061;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.tag:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.tag:hover {
+    color: #9FE061;
+}
+
+.quote .card-title {
+    font-size: 22px;
+    color: #9FE061;
+    margin-bottom: 1vh;
+
+}
+
+.quote .card-text {
+    line-height: 22px;
+    margin-left: -1vw;
+    margin-right: -1vw;
+    color: #545C67;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+}
+
+.quote-author {
+    color: #545C67;
+    font-style: italic;
+    font-size: 16px;
+    font-family: "Bitter", sans-serif;
+    font-weight: 400;
+    margin-top: -0.5vh;
+    margin-bottom: 0;
+}
