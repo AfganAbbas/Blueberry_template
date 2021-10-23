@@ -3,6 +3,11 @@ $('.owl-carousel').owlCarousel({
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    navSpeed: 1000,
+    navHover: false,
+    dragEndSpeed: 1000,
     responsiveClass: true,
     responsive: {
         0: {
@@ -21,3 +26,5 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+

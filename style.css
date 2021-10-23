@@ -8,9 +8,33 @@ body {
     background-color: #F1F2F6;
 }
 
+.nav-link {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media .bi {
+    cursor: pointer;
+    transition: 0.35s all ease-in-out;
+}
+
+.social-media .bi:hover {
+    color: #9FE061;
+}
+
 #page {
     background-color: white;
-
+    padding-bottom: 2vh;
 }
 
 #Logo {
@@ -22,22 +46,346 @@ body {
     text-align: center;
 }
 
-.news-title {
-    text-align: center;
-}
-
 .card-body {
     border: 1px solid #DDDDDD;
 }
 
-.about .card-body,
-.ads .card,
-.tags .card-body,
-.posts .card-body,
-.quote .card-body {
-    border: none;
+/***************************************Carousel****************************************/
+.owl-carousel .card {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    cursor: pointer;
 }
 
+.owl-carousel .card-body {
+    margin: 3vh 1.5vw;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .card-body .date {
+    opacity: 0;
+    font-family: "Lato", sans-serif;
+    color: #888888;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 70;
+    margin-bottom: 4vh;
+}
+
+.owl-carousel .card-body .card-title {
+    margin-top: 3vh;
+    font-family: "Bitter", sans-serif;
+}
+
+.owl-carousel .card-body .card-text {
+    line-height: 24px;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+}
+
+.owl-carousel .card .card-body .animational-btn {
+    margin-top: 2vh;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .card-body:hover .animational-btn,
+.owl-carousel .card-body:hover .date {
+    opacity: 1;
+}
+
+.owl-carousel .card-body:hover {
+    background-color: white;
+}
+
+.owl-carousel .card-body:hover .card-text,
+.owl-carousel .card-body:hover .card-title {
+    color: #363c44;
+}
+
+.pic-1 .card {
+    background-image: linear-gradient(rgba(53, 60, 68, 0.4), rgba(53, 60, 68, 0.4)), url("images/blueberry.jpg");
+}
+
+.pic-2 .card {
+    background-image: linear-gradient(rgba(53, 60, 68, 0.4), rgba(53, 60, 68, 0.4)), url("images/raspbery.jpg");
+}
+
+.pic-3 .card {
+    background-image: linear-gradient(rgba(53, 60, 68, 0.4), rgba(53, 60, 68, 0.4)), url("images/blueberry_pie.jpg");
+}
+
+.pic-4 .card {
+    background-image: linear-gradient(rgba(53, 60, 68, 0.4), rgba(53, 60, 68, 0.4)), url("images/breakfast.jpg");
+
+}
+
+.owl-prev {
+    left: -30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.owl-next {
+    right: -30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+    position: absolute;
+    top: 70px;
+}
+
+.owl-carousel .owl-prev span,
+.owl-carousel .owl-next span {
+    position: relative;
+    outline: none !important;
+    font-size: 7em;
+    font-weight: 100;
+}
+
+.owl-next:hover {
+    right: -35px;
+}
+
+.owl-prev:hover {
+    left: -35px;
+}
+
+.owl-carousel .owl-prev:hover,
+.owl-carousel .owl-next:hover {
+    background: none !important;
+    color: black !important;
+    outline: none !important;
+}
+
+.owl-carousel .card::before {
+    content: "";
+    top: 8px;
+    right: 8px;
+    height: 40px;
+    width: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    position: absolute;
+}
+
+.owl-carousel .card::after {
+    content: "";
+    bottom: 8px;
+    left: 8px;
+    height: 60px;
+    width: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    position: absolute;
+}
+
+/*************************************** Big Content ********************************/
+.big-content .card-title {
+    font-family: "Bitter", sans-serif;
+    color: #363c44;
+    font-size: 26px;
+    text-align: center;
+    padding: 0 10px;
+    padding-top: 5px;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.big-content .card-title:hover {
+    opacity: .8;
+}
+
+.animational-btn {
+    border: 1px solid #9FE061;
+    text-align: center;
+    text-decoration: none;
+    color: #363c44;
+    padding: 12px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    position: relative;
+}
+
+.animational-btn:hover {
+    color: #363c44;
+}
+
+.animational-btn::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    border-bottom: 1px solid #9FE061;
+    border-right: 1px solid #9FE061;
+    bottom: 2px;
+    right: 1px;
+    transition: 0.3s all ease-in-out;
+}
+
+.animational-btn:hover::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    border-bottom: 1px solid #9FE061;
+    border-right: 1px solid #9FE061;
+    bottom: 2px;
+    right: 1px;
+}
+
+.animational-btn::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    border-top: 1px solid #9FE061;
+    border-left: 1px solid #9FE061;
+    top: 2px;
+    left: 1px;
+    transition: 0.3s all ease-in-out;
+}
+
+.animational-btn:hover::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    border-top: 1px solid #9FE061;
+    border-left: 1px solid #9FE061;
+    top: 2px;
+    left: 1px;
+}
+
+/******************************* Little Contents **************************************/
+.lil-contents .card {
+    margin-top: 30px;
+}
+
+.lil-contents .date,
+.big-content .date {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888888;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+.lil-contents .card-title {
+    font-family: "Bitter", sans-serif;
+    color: #363c44;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.lil-contents .card-title:hover {
+    opacity: .8;
+}
+
+.lil-contents .card-text,
+.big-content .card-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #424242;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: justify;
+    padding: 0 1vw;
+}
+
+.lil-contents .category,
+.big-content .category {
+    line-height: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 2px;
+    margin: 0 4px 12px 4px;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: #9FE061;
+}
+
+.lil-contents .category::after,
+.big-content .category::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    position: absolute;
+    background: #9FE061;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 100%;
+}
+
+.lil-contents .category:hover::after,
+.big-content .category:hover::after {
+    width: 0;
+    left: 50%;
+}
+
+.lil-contents .card::before,
+.big-content .card::before {
+    content: "";
+    top: 8px;
+    left: 8px;
+    height: 40px;
+    width: 60px;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #DDDDDD;
+    opacity: .4;
+    position: absolute;
+}
+
+.lil-contents .card::after,
+.big-content .card::after {
+    content: "";
+    bottom: 8px;
+    right: 8px;
+    height: 60px;
+    width: 40px;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    position: absolute;
+}
+.fetch-cont{
+    cursor: pointer;
+}
+
+
+
+.owl-carousel .card,
+.owl-carousel .card-body,
+.about .card-body,
+.ads .card,
+.big-content .card,
+.lil-contents .card,
+.tags .card-body,
+.posts .card-body,
+.quote .card-body,
+.calendar .card-body {
+    border: none;
+}
+/*********************************** About ********************************************/
 .about img {
     width: 12em;
     border-radius: 50%;
@@ -58,19 +406,19 @@ body {
 
 .line1 {
     height: 1px;
-    width: 32px;
-    margin-bottom: 3px;
+    width: 34px;
+    margin-bottom: 2px;
 }
 
 .line2 {
     height: 1px;
-    width: 48px;
+    width: 52px;
 }
 
 .line3 {
-    margin-top: 1px;
+    margin-top: 2px;
     height: 1px;
-    width: 18px;
+    width: 22px;
 }
 
 .about .card,
@@ -83,6 +431,7 @@ body {
 
 .ads .card {
     margin-bottom: 5vh;
+    cursor: pointer;
 }
 
 .about .heading,
@@ -102,11 +451,14 @@ body {
     font-size: 14px;
 }
 
+
+
 .about .card::before,
 .ads .card::before,
 .tags .card::before,
 .posts .card::before,
-.quote .card::before {
+.quote .card::before,
+.calendar .card::before {
     content: "";
     top: 8px;
     right: 8px;
@@ -117,11 +469,13 @@ body {
     position: absolute;
 }
 
+
 .about .card::after,
 .ads .card::after,
 .tags .card::after,
 .posts .card::after,
-.quote .card::after {
+.quote .card::after,
+.calendar .card::after {
     content: "";
     bottom: 8px;
     left: 8px;
@@ -132,6 +486,7 @@ body {
     position: absolute;
 }
 
+/***************************************** Tags *************************************/
 .tag {
     text-transform: uppercase;
     text-decoration: none;
@@ -162,10 +517,11 @@ body {
     left: 0;
 }
 
-.tag:hover {
-    color: #9FE061;
+.tag:hover,
+.nav-link.option:hover {
+    color: #9FE061 !important;
 }
-
+/**************************************** Quote *********************************************/
 .quote .card-title {
     font-size: 22px;
     color: #9FE061;
@@ -180,6 +536,7 @@ body {
     color: #545C67;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
+    font-style: italic;
 }
 
 .quote-author {
@@ -191,24 +548,190 @@ body {
     margin-top: -0.5vh;
     margin-bottom: 0;
 }
-.posts img {
-    width: 50px;
-    height: 50px;
-}
-.owl-prev{
-    left: -30px;
-}
-.owl-next{
-    right: -30px;
-}
-.owl-prev,
-.owl-next {
-    position: absolute;
-    top: 50px;
-}
-.owl-prev span,
-.owl-next span {
-    font-size: 7em;
-    font-weight:100;
+
+/************************************ Latest Posts *****************************************/
+.posts-content {
+    width: 100%;
 }
 
+.posts-content .posts-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.posts-content .posts-item:hover {
+    text-decoration: underline #424242;
+
+}
+
+.posts-content .item-4 {
+    border-bottom: none;
+}
+
+.posts-content .posts-item div {
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.posts-content .posts-item p {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    color: #424242;
+    width: 70%;
+}
+
+.posts-content .posts-item div::before {
+    content: "";
+    top: 3px;
+    left: 3px;
+    height: 20px;
+    width: 15px;
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    opacity: .4;
+    position: absolute;
+    transition: .3s all ease-in-out;
+}
+
+.posts-content .posts-item div::after {
+    content: "";
+    bottom: 3px;
+    right: 3px;
+    height: 15px;
+    width: 20px;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    opacity: .4;
+    position: absolute;
+    transition: .3s all ease-in-out;
+}
+
+.posts-content .posts-item div:hover::after {
+    height: 20px;
+    width: 15px;
+}
+
+.posts-content .posts-item div:hover::before {
+    height: 15px;
+    width: 20px;
+}
+
+.posts-content .item-1 div {
+    background-image: url("images/blueberry.jpg");
+}
+
+.posts-content .item-2 div {
+    background-image: url("images/blueberry_pie.jpg");
+}
+
+.posts-content .item-3 div {
+    background-image: url("images/breakfast.jpg");
+}
+
+.posts-content .item-4 div {
+    background-image: url("images/raspbery.jpg");
+}
+
+/************************************ Calendar *****************************************/
+.calendar .card-body {
+    padding: 4vh 3vw;
+}
+
+.calendar caption {
+    text-align: right;
+    color: #777;
+    font-size: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.calendar .table th {
+    font-family: "Lato", sans-serif;
+    color: #424242;
+    font-size: 12px;
+    border: none;
+    text-align: center;
+}
+
+.calendar .table td {
+    border: 1px solid white;
+    font-size: 12px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.calendar .table .empty-place {
+    background-color: white;
+
+}
+
+.calendar .table td:hover {
+    background-color: white;
+}
+
+
+/***************************************** Footer *****************************************/
+.go-top-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    color: #9FE061;
+    border: 1px solid #f1f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease-in-out;
+}
+
+.go-top-btn:hover {
+    border: 1px solid #9FE061;
+    color: #9FE061;
+}
+
+footer {
+    background-color: white;
+    border-top: 1px solid #f1f2f6;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+}
+
+footer p {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+    font-family: "Lato",sans-serif;
+    margin-top: 2vh;
+}
+footer .developed-by a{
+    text-decoration: none;
+    color: #9FE061;
+}
+
+@media (min-width:992px) {
+    .nav-link::after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        background: #9FE061;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
